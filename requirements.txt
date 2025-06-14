@@ -5,3 +5,4 @@ langchain-community
 langserve
 langchain-openai
 supabase
+sse_starlette
