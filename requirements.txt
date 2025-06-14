@@ -4,7 +4,7 @@ uvicorn==0.29.0
 langchain==0.2.0
 langchain-community==0.2.0
 langchain-openai==0.1.7
-langserve==0.0.67
+langserve==0.2.3
 
 supabase==2.4.4
 sse_starlette==1.6.5
