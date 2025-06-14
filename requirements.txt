@@ -1,13 +1,12 @@
-fastapi==0.110.3
+fastapi==0.111.0
 uvicorn==0.29.0
 
-langchain==0.1.16
-langchain-community==0.0.33
+langchain==0.2.0
+langchain-community==0.2.0
 langchain-openai==0.1.7
-langserve==0.0.51
+langserve==0.0.67
 
 supabase==2.4.4
 sse_starlette==1.6.5
 
-# **Cực kỳ quan trọng: Ép về Pydantic 1**
-pydantic==1.10.13
+pydantic>=2.0.0
