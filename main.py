@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI
 from langserve import add_routes
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain.vectorstores.supabase import SupabaseVectorStore
+from langchain_community.vectorstores import SupabaseVectorStore
 from supabase import create_client
 
 app = FastAPI()
@@ -16,7 +16,8 @@ embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 supabase_client = create_client(SUPABASE_URL, SUPABASE_KEY)
 vectorstore = SupabaseVectorStore(
     supabase_client,
-    embeddings
+    embeddings,
+    table_name="documents"    # <-- Dòng này là bắt buộc!
 )
 
 from langchain.chains import ConversationalRetrievalChain
